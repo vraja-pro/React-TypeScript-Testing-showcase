@@ -1,6 +1,5 @@
 import React,{useEffect, useState} from 'react'
 import {MOVIES_API} from '../../constant'
-//import axios from 'axios'
 import {Grid,Card,Rating } from '@mui/material'
 
 interface Movie {
@@ -17,9 +16,9 @@ const Movies = () => {
         const response = await fetch(MOVIES_API);
         const data = await response.json();
         setMovies(data)
-  } catch (err){
-    console.log(err)
-  }
+      } catch (err){
+        console.log(err)
+      }
   }
 
 
